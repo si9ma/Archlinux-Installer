@@ -924,8 +924,10 @@ case $retval in
         ;;
 esac
 
-# copy installer script to new user home directory
-mkdir -p /mnt/home/$usrname/Archlinux-Installer
+# download and copy installer script to new user home directory
+pacman -S git
+git clone git@github.com:si9ma/Archlinux-Installer.me.git /mnt/home/$usrname/Archlinux-Installer
+# mkdir -p /mnt/home/$usrname/Archlinux-Installer
 cp * /mnt/home/$usrname/Archlinux-Installer -r
 
 # backup profile
