@@ -302,9 +302,8 @@ function restore_other
     cp $Config_DIR/config/gtk-3.0/* ~/.config/gtk-3.0/ -r
 
 	## gtk bookmarks
-	mkdir -p ~/Windows
 	mkdir -p ~/Github
-	mkdir -p ~/Temp
+	mkdir -p ~/Factory
 }
 
 function restore_gitkraken
