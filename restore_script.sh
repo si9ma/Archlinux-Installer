@@ -337,6 +337,7 @@ function restore_vscode
 	yaourt --noconfirm -S visual-studio-code-bin
 	
 	# config
+	mkdir -p ~/.config/Code/User
 	cp $Config_DIR/config/vscode/keybindings.json ~/.config/Code/User/
 	cp $Config_DIR/config/vscode/settings.json ~/.config/Code/User/
 	cp $Config_DIR/config/vscode/vsicons.settings.json ~/.config/Code/User/
