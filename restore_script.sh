@@ -341,7 +341,7 @@ function restore_vscode
 	cp $Config_DIR/config/vscode/keybindings.json ~/.config/Code/User/
 	cp $Config_DIR/config/vscode/settings.json ~/.config/Code/User/
 	cp $Config_DIR/config/vscode/vsicons.settings.json ~/.config/Code/User/
-	cp $Config_DIR/config/vscode/snippets ~/.config/Code/User/ -r
+	# cp $Config_DIR/config/vscode/snippets ~/.config/Code/User/ -r
 
 	# extensions
 	extensions=$(cat $Config_DIR/config/vscode/extensions.list | xargs)
