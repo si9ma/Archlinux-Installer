@@ -322,7 +322,7 @@ function restore_libreoffice
 
 function restore_postman
 {
-	yaourt --noconfirm -S postaman-bin
+	yaourt --noconfirm -S postman-bin
 }
 
 function restore_tim
