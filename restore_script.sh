@@ -223,7 +223,7 @@ function restore_custom_script
 
 function restore_vi_mode
 {
-	cp $Config_DIR/config/readline/.* ~/
+	cp $Config_DIR/config/readline/.editrc  $Config_DIR/config/readline/.inputrc  ~/
 }
 
 function restore_touchpad
