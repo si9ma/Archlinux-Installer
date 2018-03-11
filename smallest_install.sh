@@ -925,7 +925,8 @@ case $retval in
 esac
 
 # download and copy installer script to new user home directory
-pacman -S git
+$CHROOT pacman -S git
+$CHROOT git clone https://github.com/si9ma/Archlinux-Installer.me.git /home/$usrname/Archlinux-Installer
 git clone git@github.com:si9ma/Archlinux-Installer.me.git /mnt/home/$usrname/Archlinux-Installer
 # mkdir -p /mnt/home/$usrname/Archlinux-Installer
 cp * /mnt/home/$usrname/Archlinux-Installer -r
