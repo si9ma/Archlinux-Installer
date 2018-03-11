@@ -57,6 +57,7 @@ function backup_hexo
     mkdir -p ./config/hexo/config
     sudo pacman --noconfirm -S rsync
     rsync -av --exclude='public' --exclude='node_modules' --exclude='.git' ~/.hexo/ ./config/hexo/config/
+    rm ./config/hexo/config/.git -rf
 }
 
 function backup_proxychains
