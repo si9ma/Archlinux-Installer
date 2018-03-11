@@ -120,8 +120,7 @@ function backup_deepin-screenshot
 
 function backup_ranger
 {
-    echo
-    #  to do
+    cp ~/.config/ranger/* ./config/ranger/ -r
 }
 
 function backup_nautilus
@@ -215,7 +214,7 @@ function backup_vscode
     cp ~/.config/Code/User/keybindings.json ./config/vscode/
     cp ~/.config/Code/User/settings.json ./config/vscode
     cp ~/.config/Code/User/vsicons.settings.json ./config/vscode
-    cp ~/.config/Code/User/snippets ./config/vscode -r
+    # cp ~/.config/Code/User/snippets ./config/vscode -r
 
     # extensions
     ls ~/.vscode/extensions >./config/vscode/extensions.list

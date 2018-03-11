@@ -207,6 +207,8 @@ function restore_deepin-screenshot
 function restore_ranger
 {
 	sudo  pacman --noconfirm -S ranger
+	mkdir -p ~/.config/ranger
+	cp $Config_DIR/config/ranger/* ~/.config/ranger -r
 }
 
 function restore_nautilus

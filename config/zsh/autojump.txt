@@ -147,8 +147,8 @@
 10.0	/home/si9ma/eclipse-workspace/.metadata/.plugins/com.genuitec.eclipse.devstyle
 10.0	/home/si9ma/Github/Archlinux-Installer/config/idea
 10.0	/home/si9ma/Github/Archlinux-Installer/config/vscode
-33.166247903554	/home/si9ma/Github/Archlinux-Installer.me
-34.64101615137755	/home/si9ma/Github/Archlinux-Installer.me/config
+34.64101615137755	/home/si9ma/Github/Archlinux-Installer.me
+37.41657386773942	/home/si9ma/Github/Archlinux-Installer.me/config
 14.142135623730951	/home/si9ma/Github/Archlinux-Installer.me/config/hexo
 26.457513110645905	/home/si9ma/Github/Archlinux-Installer.me/config/hexo/config
 10.0	/home/si9ma/Github/Archlinux-Installer.me/config/hexo/config/source
@@ -165,4 +165,5 @@
 10.0	/home/si9ma/Github/Archlinux-Installer/config/font
 14.142135623730951	/home/si9ma/Github/Archlinux-Installer.me/config/hexo/config/.git
 10.0	/home/si9ma/Github/Archlinux-Installer.me/config/readline
-10.0	/home/si9ma/Github/Archlinux-Installer.me/config/vscode
+14.142135623730951	/home/si9ma/Github/Archlinux-Installer.me/config/vscode
+10.0	/home/si9ma/.config/ranger
