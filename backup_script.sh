@@ -7,7 +7,8 @@
 ## function backup_<your config name>
 ##
 
-. log.sh
+#  log
+exec 2> >(tee -a "installer.log")
 
 # backup terminator config
 function backup_terminator
