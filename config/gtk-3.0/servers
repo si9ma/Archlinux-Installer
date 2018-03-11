@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="sftp://root@172.26.24.6/" added="2018-01-06T11:52:59Z" modified="2018-01-06T11:52:59Z" visited="2018-01-06T11:52:59Z">
+    <title>/ on 172.26.24.6</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus %u&apos;" modified="2018-01-06T11:52:59Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="sftp://45.77.10.132/" added="2018-01-06T11:55:35Z" modified="2018-01-06T11:55:35Z" visited="2018-01-06T11:55:35Z">
+    <title>/ on 45.77.10.132</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus %u&apos;" modified="2018-01-06T11:55:35Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="sftp://172.26.24.6/" added="2018-01-06T11:59:37Z" modified="2018-01-06T11:59:37Z" visited="2018-01-06T11:59:37Z">
+    <title>/ on 172.26.24.6</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus %u&apos;" modified="2018-01-06T11:59:37Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

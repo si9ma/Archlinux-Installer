@@ -1,0 +1,27 @@
+#!/bin/bash
+
+declare -i IDFirst
+declare -i IDLast
+IDFirst=`xinput list | grep -Eio '(touchpad|glidepoint)\s*id\=[0-9]{1,2}' | grep -Eo '[0-9]{1,2}'|head -1`
+IDLast=`xinput list | grep -Eio '(touchpad|glidepoint)\s*id\=[0-9]{1,2}' | grep -Eo '[0-9]{1,2}'|tail -1`
+declare -i STATE
+STATE=`xinput list-props $IDFirst|grep 'Device Enabled'|awk '{print $4}'`
+if [ $STATE -eq 1 ]
+then
+    xinput disable $IDFirst
+else
+    xinput enable $IDFirst
+fi
+
+if [ $IDFirst -eq $IDLast ]
+then
+	echo 
+else
+	STATE=`xinput list-props $IDLast|grep 'Device Enabled'|awk '{print $4}'`
+	if [ $STATE -eq 1 ]
+	then
+		xinput disable $IDLast
+	else
+		xinput enable $IDLast
+	fi
+fi
