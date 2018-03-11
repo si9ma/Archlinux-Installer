@@ -53,7 +53,7 @@
       type = Window
     [[[terminal1]]]
       command = ranger
-      directory = /home/si9ma/
+      directory = /home/si9ma/Factory
       order = 0
       parent = child0
       profile = default

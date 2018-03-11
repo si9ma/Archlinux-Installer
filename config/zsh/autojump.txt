@@ -4,7 +4,7 @@
 10.0	/home/si9ma/.config/SogouPY/scd
 17.320508075688775	/usr/bin
 10.0	/home/si9ma/.FileShare
-10.0	/home/si9ma/Windows
+14.142135623730951	/home/si9ma/Windows
 69.28203230275511	/home/si9ma/Github
 24.49489742783178	/home/si9ma/Github/YunKnowledge
 10.0	/etc/udev/rules.d
@@ -55,7 +55,7 @@
 30.000000000000004	/opt/tomcat
 22.360679774997898	/opt/tomcat/conf
 10.0	/usr/share/doc/jdk
-10.0	/home/si9ma/Documents
+14.142135623730951	/home/si9ma/Documents
 10.0	/home/si9ma/Documents/JavaEE
 10.0	/home/si9ma/Documents/JavaEE/assignment
 10.0	/home/si9ma/Documents/JavaEE/assignment/code
@@ -167,3 +167,9 @@
 10.0	/home/si9ma/Github/Archlinux-Installer.me/config/readline
 14.142135623730951	/home/si9ma/Github/Archlinux-Installer.me/config/vscode
 10.0	/home/si9ma/.config/ranger
+22.360679774997898	/home/si9ma/AndroidStudioProjects
+10.0	/home/si9ma/AndroidStudioProjects/Dog
+10.0	/home/si9ma/IDEA/.idea
+17.320508075688775	/home/si9ma/IDEA
+10.0	/home/si9ma/IDEA/DeviceManage
+10.0	/home/si9ma/EclipseProjects

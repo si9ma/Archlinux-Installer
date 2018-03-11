@@ -1,4 +1,3 @@
-rename Github
 mkdir doc
 rename software design
 rename Software Engineering
@@ -41,10 +40,11 @@ rename test.js
 rename result
 mkdir result
 
-ter
-terminal 
-default_linemode 
-delete 
 search ranger
 search .ranger
 open_with 
+ter
+default_linemode 
+delete 
+w
+terminal 
