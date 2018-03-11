@@ -206,7 +206,7 @@ function restore_deepin-screenshot
 
 function restore_ranger
 {
-	sudo --noconfirm pacman -S ranger
+	sudo  pacman --noconfirm -S ranger
 }
 
 function restore_nautilus
@@ -218,12 +218,12 @@ function restore_nautilus
 function restore_custom_script
 {
     cp /usr/local/bin/* ./config/script/
-	sudo cp $Config_DIR/config/script/* /usr/local/bin/
+	sudo cp $Config_DIR/config/script/* /usr/local/bin/ -r
 }
 
 function restore_vi_mode
 {
-	cp $Config_DIR/config/readline/* ~/
+	cp $Config_DIR/config/readline/.* ~/
 }
 
 function restore_touchpad
@@ -249,7 +249,7 @@ function restore_synapse
 
 function restore_other
 {
-	sudo pacman --noconfirm -S bless cmake dconf-editor gimp meld netease-cloud-music teamviewer gnome-tweak-tool wireshark-qt tcpdump htop
+	sudo pacman --noconfirm -S bless cmake dconf-editor gimp meld netease-cloud-music teamviewer gnome-tweak-tool wireshark-qt tcpdump htop openssh
 
 	## ssh
 	sudo pacman --noconfirm -S openssh
