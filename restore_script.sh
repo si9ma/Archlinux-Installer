@@ -214,12 +214,12 @@ function restore_ranger
 function restore_nautilus
 {
 	 sudo pacman --noconfirm -S nautilus
+	mkdir -p ~/.config/nautilus
 	 cp $Config_DIR/config/nautilus/* ~/.config/nautilus/
 }
 
 function restore_custom_script
 {
-    cp /usr/local/bin/* ./config/script/
 	sudo cp $Config_DIR/config/script/* /usr/local/bin/ -r
 }
 
