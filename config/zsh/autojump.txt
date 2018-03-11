@@ -5,7 +5,7 @@
 17.320508075688775	/usr/bin
 10.0	/home/si9ma/.FileShare
 10.0	/home/si9ma/Windows
-68.55654600401047	/home/si9ma/Github
+69.28203230275511	/home/si9ma/Github
 24.49489742783178	/home/si9ma/Github/YunKnowledge
 10.0	/etc/udev/rules.d
 10.0	/home/si9ma/.gradle
@@ -147,10 +147,10 @@
 10.0	/home/si9ma/eclipse-workspace/.metadata/.plugins/com.genuitec.eclipse.devstyle
 10.0	/home/si9ma/Github/Archlinux-Installer/config/idea
 10.0	/home/si9ma/Github/Archlinux-Installer/config/vscode
-30.000000000000004	/home/si9ma/Github/Archlinux-Installer.me
-28.284271247461902	/home/si9ma/Github/Archlinux-Installer.me/config
+33.166247903554	/home/si9ma/Github/Archlinux-Installer.me
+34.64101615137755	/home/si9ma/Github/Archlinux-Installer.me/config
 14.142135623730951	/home/si9ma/Github/Archlinux-Installer.me/config/hexo
-22.360679774997898	/home/si9ma/Github/Archlinux-Installer.me/config/hexo/config
+26.457513110645905	/home/si9ma/Github/Archlinux-Installer.me/config/hexo/config
 10.0	/home/si9ma/Github/Archlinux-Installer.me/config/hexo/config/source
 10.0	/home/si9ma/Github/Archlinux-Installer.me/config/hexo/config/source/img
 26.457513110645905	/home/si9ma/Github/Archlinux-Installer.me/config/sogou
@@ -163,4 +163,6 @@
 10.0	/home/si9ma/Github/Archlinux-Installer.me/config/sogou/SogouPY/sync/288f14e847676a7605f5b76c5ed9f6ff
 14.142135623730951	/home/si9ma/Github/Archlinux-Installer.me/config/sogou/SogouPY.users
 10.0	/home/si9ma/Github/Archlinux-Installer/config/font
-10.0	/home/si9ma/Github/Archlinux-Installer.me/config/hexo/config/.git
+14.142135623730951	/home/si9ma/Github/Archlinux-Installer.me/config/hexo/config/.git
+10.0	/home/si9ma/Github/Archlinux-Installer.me/config/readline
+10.0	/home/si9ma/Github/Archlinux-Installer.me/config/vscode
