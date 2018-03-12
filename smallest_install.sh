@@ -884,21 +884,21 @@ then
     $CHROOT grub-install --target=${platform}-efi --efi-directory=/boot --bootloader-id=Grub 
     $CHROOT grub-mkconfig -o /boot/grub/grub.cfg
 
-    #	# add entry for windows,just for uefi
-    #	# if ther are the windows ,add entry
-    #	if [ -d "/mnt/boot/EFI/Microsoft" ]
-    #	then
-    #		echo menuentry \"Windows\" { >>/boot/grub/grub.cfg
-    #		echo insmod part_gpt >>/boot/grub/grub.cfg
-    #		echo insmod fat >>/boot/grub/grub.cfg
-    #		echo insmod search_fs_uuid>>/boot/grub/grub.cfg
-    #		echo insmod chain>>/boot/grub/grub.cfg
-    #		echo -n	search --fs-uuid --set=root\ >>/boot/grub/grub.cfg
-    #		echo -n `grub-probe --target=hints_string $partition/EFI/Microsoft/Boot/bootmgfw.efi`\  >>/boot/grub/grub.cfg
-    #		grub-probe --target=fs_uuid /boot/EFI/Microsoft/Boot/bootmgfw.efi>>/boot/grub/grub.cfg
-    #		echo chainloader /EFI/Microsoft/Boot/bootmgfw.efi>>/boot/grub/grub.cfg
-    #		echo }>>/boot/grub/grub.cfg
-    #	fi
+    # add entry for windows,just for uefi
+    # if ther are the windows ,add entry
+    if [ -d "/mnt/boot/EFI/Microsoft" ]
+    then
+        echo menuentry \"Windows\" { >>/boot/grub/grub.cfg
+        echo insmod part_gpt >>/boot/grub/grub.cfg
+        echo insmod fat >>/boot/grub/grub.cfg
+        echo insmod search_fs_uuid>>/boot/grub/grub.cfg
+        echo insmod chain>>/boot/grub/grub.cfg
+        echo -n	search --fs-uuid --set=root\ >>/boot/grub/grub.cfg
+        echo -n `grub-probe --target=hints_string $partition/EFI/Microsoft/Boot/bootmgfw.efi`\  >>/boot/grub/grub.cfg
+        grub-probe --target=fs_uuid /boot/EFI/Microsoft/Boot/bootmgfw.efi>>/boot/grub/grub.cfg
+        echo chainloader /EFI/Microsoft/Boot/bootmgfw.efi>>/boot/grub/grub.cfg
+        echo }>>/boot/grub/grub.cfg
+    fi
 else # for BIOS
     $CHROOT pacman --noconfirm -S grub
     $CHROOT grub-install --target=i386-pc --recheck $ROOT_DISK
