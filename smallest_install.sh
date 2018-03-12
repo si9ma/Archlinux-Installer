@@ -908,22 +908,6 @@ fi
 # enable dhcpcd.service
 $CHROOT ln -s /usr/lib/systemd/system/dhcpcd.service /etc/systemd/system/multi-user.target.wants/dhcpcd.service
 
-# Done
-title="Complete Installation"
-msg="Hey! You have installed a smallest Archlinux on your computer. Plesase type [ENTER] to reboot your computer. When your computer boot again, you need login(in order to install successfully, don't login with root) to complete Subsequent installation.	[ESC] to exit installer"
-dialog --no-cancel --ascii-lines --title "$title" --backtitle "$HEADER" --msgbox "$msg" 10 60
-
-retval=$?
-echo
-
-case $retval in
-    255) #ESC,exit
-        echo 
-        echo $EXIT_MSG
-        exit 255
-        ;;
-esac
-
 # download and copy installer script to new user home directory
 $CHROOT pacman -S git
 $CHROOT git clone https://github.com/si9ma/Archlinux-Installer.me.git /home/$usrname/Archlinux-Installer
@@ -939,6 +923,22 @@ echo >>/mnt/etc/profile
 echo "## Add by Archlinux, will be deleted later" >>/mnt/etc/profile
 echo "cd /home/$usrname/Archlinux-Installer/" >>/mnt/etc/profile
 echo "bash ./option_install.sh" >>/mnt/etc/profile
+
+# Done
+title="Complete Installation"
+msg="Hey! You have installed a smallest Archlinux on your computer. Plesase type [ENTER] to reboot your computer. When your computer boot again, you need login(in order to install successfully, don't login with root) to complete Subsequent installation.	[ESC] to exit installer"
+dialog --no-cancel --ascii-lines --title "$title" --backtitle "$HEADER" --msgbox "$msg" 10 60
+
+retval=$?
+echo
+
+case $retval in
+    255) #ESC,exit
+        echo 
+        echo $EXIT_MSG
+        exit 255
+        ;;
+esac
 
 # reboot
 #umount -R /mnt
