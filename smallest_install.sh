@@ -882,22 +882,22 @@ if [ "$BOOT_MODE" = "UEFI" ]
 then
     $CHROOT pacman --noconfirm -S grub efibootmgr
     $CHROOT grub-install --target=${platform}-efi --efi-directory=/boot --bootloader-id=Grub 
-    $CHROOT grub-mkconfig -o /boot/grub/grub.cfg
+    $CHROOT grub-mkconfig -o /mnt/boot/grub/grub.cfg
 
     # add entry for windows,just for uefi
     # if ther are the windows ,add entry
     if [ -d "/mnt/boot/EFI/Microsoft" ]
     then
-        echo menuentry \"Windows\" { >>/boot/grub/grub.cfg
-        echo insmod part_gpt >>/boot/grub/grub.cfg
-        echo insmod fat >>/boot/grub/grub.cfg
-        echo insmod search_fs_uuid>>/boot/grub/grub.cfg
-        echo insmod chain>>/boot/grub/grub.cfg
-        echo -n	search --fs-uuid --set=root\ >>/boot/grub/grub.cfg
-        echo -n `grub-probe --target=hints_string $partition/EFI/Microsoft/Boot/bootmgfw.efi`\  >>/boot/grub/grub.cfg
-        grub-probe --target=fs_uuid /boot/EFI/Microsoft/Boot/bootmgfw.efi>>/boot/grub/grub.cfg
-        echo chainloader /EFI/Microsoft/Boot/bootmgfw.efi>>/boot/grub/grub.cfg
-        echo }>>/boot/grub/grub.cfg
+        echo menuentry \"Windows\" { >>/mnt/boot/grub/grub.cfg
+        echo insmod part_gpt >>/mnt/boot/grub/grub.cfg
+        echo insmod fat >>/mnt/boot/grub/grub.cfg
+        echo insmod search_fs_uuid>>/mnt/boot/grub/grub.cfg
+        echo insmod chain>>/mnt/boot/grub/grub.cfg
+        echo -n	search --fs-uuid --set=root\ >>/mnt/boot/grub/grub.cfg
+        echo -n `grub-probe --target=hints_string /mnt/boot/EFI/Microsoft/Boot/bootmgfw.efi`\  >>/mnt/boot/grub/grub.cfg
+        grub-probe --target=fs_uuid /mnt/boot/EFI/Microsoft/Boot/bootmgfw.efi>>/mnt/boot/grub/grub.cfg
+        echo chainloader /EFI/Microsoft/Boot/bootmgfw.efi>>/mnt/boot/grub/grub.cfg
+        echo }>>/mnt/boot/grub/grub.cfg
     fi
 else # for BIOS
     $CHROOT pacman --noconfirm -S grub
@@ -909,7 +909,7 @@ fi
 $CHROOT ln -s /usr/lib/systemd/system/dhcpcd.service /etc/systemd/system/multi-user.target.wants/dhcpcd.service
 
 # download and copy installer script to new user home directory
-$CHROOT pacman -S git
+$CHROOT pacman --noconfirm -S git
 $CHROOT git clone https://github.com/si9ma/Archlinux-Installer.me.git /home/$usrname/Archlinux-Installer
 git clone git@github.com:si9ma/Archlinux-Installer.me.git /mnt/home/$usrname/Archlinux-Installer
 # mkdir -p /mnt/home/$usrname/Archlinux-Installer
