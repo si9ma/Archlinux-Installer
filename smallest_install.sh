@@ -866,6 +866,8 @@ echo "$usrname ALL=(ALL) ALL" >> /mnt/etc/sudoers
 $CHROOT pacman --noconfirm -S dialog
 # Nework manager
 $CHROOT pacman --noconfirm -S networkmanager
+# dhclient
+$CHROOT pacman --noconfirm -S dhclient
 
 # Initramfs
 $CHROOT mkinitcpio -p linux
