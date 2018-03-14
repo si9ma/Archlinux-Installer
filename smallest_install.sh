@@ -6,7 +6,8 @@
 ## use this script to install smallest archlinux
 ##
 
-. log.sh
+#  log
+exec 2> >(tee -a "installer.log")
 
 HEADER="Archlinux Installer"
 CHROOT="arch-chroot /mnt"
