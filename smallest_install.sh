@@ -883,7 +883,7 @@ if [ "$BOOT_MODE" = "UEFI" ]
 then
     $CHROOT pacman --noconfirm -S grub efibootmgr
     $CHROOT grub-install --target=${platform}-efi --efi-directory=/boot --bootloader-id=Grub 
-    $CHROOT grub-mkconfig -o /mnt/boot/grub/grub.cfg
+    $CHROOT grub-mkconfig -o /boot/grub/grub.cfg
 
     # add entry for windows,just for uefi
     # if ther are the windows ,add entry
