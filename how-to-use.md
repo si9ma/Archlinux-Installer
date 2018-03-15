@@ -37,15 +37,15 @@
 
 #### 制作Arch启动盘
 
-首先，需要下载Arch安装ios包，怎么下载我就不多说了。然后找个启动盘制作工具，在Windows上，我比较喜欢的一个工具是Rufus。如果使用虚拟机的童鞋，就没必要制作启动盘了，直接使用ios包就行了。
+首先，需要下载`Arch`安装`ios`包，怎么下载我就不多说了。然后找个启动盘制作工具，在`Windows`上，我比较喜欢的一个工具是`Rufus`。如果使用虚拟机的童鞋，就没必要制作启动盘了，直接使用`ios`包就行了。
 
 #### 使用启动盘启动并连网
 
-怎么启动就不多说了。启动之后最重要的事就是连网，只有连上网才能继续后续的操作。直接使用网线连网并且不需要验证的话，一般启动之后就连上网了。如果是需要验证或使用WIFI的话就有点麻烦了。怎么看是否连上网了呢？`ping`一下，比如`ping www.baidu.com`，如果`ping`能成功的话，那就是连上了。如果不成功的话，那.....，再检查检查 。
+怎么启动就不多说了。启动之后最重要的事就是连网，只有连上网才能继续后续的操作。直接使用网线连网并且不需要验证的话，一般启动之后就连上网了。如果是需要验证或使用`WIFI`的话就有点麻烦了。不会的童鞋可以参考我的文章([怎么在Linux使用命令行连接WIFI](https://coolcodes.me/2018/03/15/how-to-connect-wifi-in-linux-command/))。怎么看是否连上网了呢？`ping`一下，比如`ping www.baidu.com`，如果`ping`能成功的话，那就是连上了。如果不成功的话，那.....，再检查检查 。
 
 #### 开始安装
 
-前面都是一些准备工作，接下来才是使用我的安装器。
+前面都是一些准备工作，接下来才是使用安装器。
 
 在命令行中输入:
 
@@ -57,13 +57,13 @@ bash <(curl https://raw.githubusercontent.com/si9ma/Archlinux-Installer.me/maste
 
 ![keymap-1](picture/keymap-1.png)
 
-一般使用的都是US布局，所以选择No就行。但是如果你想使用其它布局的话就选择Yes，然后选择合适的布局。如下，
+一般使用的都是`US`布局，所以选择`No`就行。但是如果你想使用其它布局的话就选择`Yes`，然后选择合适的布局。如下，
 
 ![keymap-2](picture/keymap-2.png)
 
 #### 硬盘分区
 
-安装Arch之前，需要对硬盘进行分区，在分区之前一定要看好各个磁盘/分区的大小，避免在后续挂载分区的时候选错，然后格错分区。
+安装`Arch`之前，需要对硬盘进行分区，在分区的时候一定要看好各个磁盘/分区的大小，避免在后续挂载分区的时候选错，而格错分区。
 
 ![partition-1](picture/partition-1.png)
 
@@ -71,25 +71,25 @@ bash <(curl https://raw.githubusercontent.com/si9ma/Archlinux-Installer.me/maste
 
 1. BIOS启动方式
 
-如果你的启动方式是BIOS，那么你应该把你的硬盘转换成MBR的，也就是说接下来的选择分区结构，你应该选择dos。
+&nbsp;&nbsp;&nbsp;&nbsp;如果你的启动方式是`BIOS`，那么你应该把你的硬盘转换成`MBR`的，也就是说接下来的选择分区结构，你应该选择`dos`。
 
-![partition-bios](picture/partition-bios.png)
+&nbsp;&nbsp;&nbsp;&nbsp;![partition-bios](picture/partition-bios.png)
 
 2. UEFI启动方式
 
-如果你的启动方式是UEFI，你必须有一个100M-200M大小的分区用作ESP分区。如果你电脑上之前有装过Windows，并且也是UEFI启动，那么已经存在一个EFI分区了，在后续的分区挂载时候不应该格式化该EFI分区，否则Windows就无法启动了。
+ &nbsp;&nbsp;&nbsp;&nbsp;如果你的启动方式是`UEFI`，你必须有一个100M-200M大小的分区用作`ESP`分区。如果你电脑上之前有装过`Windows`，并且也是`UEFI`启动，那么已经存在一个`EFI`分区了，在后续的分区挂载时候不应该格式化该`EFI`分区，否则`Windows`就无法启动了。
 
-![uefi](picture/uefi.png)
+ &nbsp;&nbsp;&nbsp;&nbsp;![uefi](picture/uefi.png)
 
 ##### 选择需要进行分区的硬盘
 
-如果有多个硬盘，将按照顺序进行分区:
+如果有多个硬盘，将按照顺序进行分区
 
 ![partition-select](picture/partition-select.png)
 
 ##### 选择硬盘分区结构
 
-如果你的硬盘是还没进行过分区的硬盘，会出现这个页面。如果你是BIOS启动，那么选择dos，如果是UEFI启动，那么选择gpt。
+如果你的硬盘是还没进行过分区的硬盘，会出现这个页面。如果你是`BIOS`启动，那么选择`dos`，如果是`UEFI`启动，那么选择`gpt`。
 
 ![partition-label](picture/partition-label.png)
 
@@ -113,7 +113,7 @@ bash <(curl https://raw.githubusercontent.com/si9ma/Archlinux-Installer.me/maste
 
 ##### 对于/boot
 
-如果你的启动方式是UEFI，那么/boot必须单独挂载到ESP分区上去，如果ESP分区是来自之前的Windows的安装，那么你不能格式化该分区，如图，你应该选择No
+如果你的启动方式是`UEFI`，那么`/boot`必须单独挂载到`ESP`分区上去，如果`ESP`分区是来自之前的`Windows`的安装，那么你不能格式化该分区，如图，你应该选择`No`
 
 ![uefi-confirm](picture/uefi-confirm.png)
 
@@ -193,17 +193,17 @@ root密码
 
 #### 登录进行后续安装
 
-使用前面设置的用户进行登录，别使用root用户进行登录，使用root登录将导致后续安装失败
+使用前面设置的用户进行登录，别使用`root`用户进行登录，使用`root`登录将导致后续安装无法继续
 
 ![boot-go](picture/boot-go.png)
 
 #### 启用AUR
 
-AUR库并不是官方的源，但很多时候很好用。你也可以选择不启用。
+`AUR`库并不是官方的源，但很多时候很好用。你也可以选择不启用。
 
 ![aur](picture/aur.png)
 
-选择源，国内用户选择archlinuxcn
+选择源，国内用户选择`archlinuxcn`
 
 ![aur-mirrors](picture/aur-mirrors.png)
 
@@ -215,7 +215,7 @@ AUR库并不是官方的源，但很多时候很好用。你也可以选择不�
 
 #### 安装桌面系统
 
-先安装显卡驱动，虚拟机用户可以安装对应的虚拟机驱动，intel用户一般都有intel的集成显卡，所以选择intel的驱动。Linux对`NVIDIA`显卡的驱动支持不是很好，所以如果你想使用`NVIDIA`显卡驱动的话，你自己之后慢慢折腾吧～
+先安装显卡驱动，虚拟机用户可以安装对应的虚拟机驱动，`intel`用户一般都有`intel`的集成显卡，所以选择`intel`的驱动。`Linux`对`NVIDIA`显卡的驱动支持不是很好，所以如果你想使用`NVIDIA`显卡驱动的话，你自己之后慢慢折腾吧～
 
 ![driver](picture/driver.png)
 
