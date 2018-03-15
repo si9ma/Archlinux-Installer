@@ -36,6 +36,7 @@ Arch Linux主张 “以用户为中心” ，让用户自己去动手控制自�
 ## How To Use
 
 - [How To Use](how-to-use.md)
+- [我的博客](https://coolcodes.me/2018/03/15/archlinux-installer/)
 
 ## Report Bug
 

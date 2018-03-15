@@ -50,7 +50,7 @@
 在命令行中输入:
 
 ```bash
-bash <(curl https://raw.githubusercontent.com/si9ma/Archlinux-Installer.me/master/smallest_install.sh)
+bash <(curl https://raw.githubusercontent.com/si9ma/Archlinux-Installer/master/smallest_install.sh)
 ```
 
 #### 选择键盘布局
