@@ -52,7 +52,7 @@ KEY_MAP="us"
 
 # window
 title="Keymap Selection"
-msg="The default console keymap is US. Would you want to set a\
+msg="The default console keymap is US. Would you want to set a \
 non-default keymap for your keyboard?  [ESC] to exit installer\n\nPlease confirm before typing the [ENTER], because you can't undo it."
 dialog --ascii-lines --default-button "No" --title "$title" --backtitle "$HEADER" --yesno "$msg" 10 45
 
@@ -250,11 +250,11 @@ umount -R /mnt
 
 # select the mount point which you want mount as separated partition
 title="Mount the file systems"
-msg="Select the mount point which you want mount as separated partition. Your boot mode is UEFI,so \"/\" and \"/boot\" must be selected.		[ESC] to exit the installer\n\nPlease confirm before typing the [ENTER], because you can't undo it."
 
 # if the boot mode is BIOS,we shouldn't create a separated partition for /boot
 if [ "$BOOT_MODE" = "BIOS" ]
 then
+    msg="Select the mount point which you want mount as separated partition.	[ESC] to exit the installer\n\nPlease confirm before typing the [ENTER], because you can't undo it."
     dialog --no-cancel --ok-label "Continue" --ascii-lines --title "$title" --backtitle "$HEADER" --checklist "$msg" 18 75 18 \
         "/" "Entire system's root directory" "ON"\
         "/boot" "Boot loader files" "OFF"\
@@ -268,6 +268,7 @@ then
         "/run" "Run-time variable data" "OFF"\
         "swap" "swap partition" "OFF" 2>tempfile
 else
+    msg="Select the mount point which you want mount as separated partition. Your boot mode is UEFI,so \"/\" and \"/boot\" must be selected.		[ESC] to exit the installer\n\nPlease confirm before typing the [ENTER], because you can't undo it."
     dialog --no-cancel --ok-label "Continue" --ascii-lines --title "$title" --backtitle "$HEADER" --checklist "$msg" 18 75 18 \
         "/" "Entire system's root directory" "ON"\
         "/boot" "Boot loader files" "ON"\

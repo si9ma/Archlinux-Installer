@@ -53,8 +53,8 @@ function backup_shadowsocks
 
 function backup_hexo
 {
-    rm ~/.hexo/public -rf
-    rm ~/.hexo/.deploy_git ~/.hexo/.gitignore -rf
+    # rm ~/.hexo/public -rf
+    # rm ~/.hexo/.deploy_git ~/.hexo/.gitignore -rf
     mkdir -p ./config/hexo/config
     sudo pacman --noconfirm -S rsync
     rsync -av --exclude='public' --exclude='node_modules' --exclude='.git' ~/.hexo/ ./config/hexo/config/
