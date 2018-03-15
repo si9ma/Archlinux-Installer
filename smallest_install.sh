@@ -914,7 +914,7 @@ $CHROOT ln -s /usr/lib/systemd/system/dhcpcd.service /etc/systemd/system/multi-u
 
 # download and copy installer script to new user home directory
 $CHROOT pacman --noconfirm -S git
-$CHROOT git clone https://github.com/si9ma/Archlinux-Installer.me.git /home/$usrname/Archlinux-Installer
+$CHROOT git clone https://github.com/si9ma/Archlinux-Installer.git /home/$usrname/Archlinux-Installer
 git clone git@github.com:si9ma/Archlinux-Installer.me.git /mnt/home/$usrname/Archlinux-Installer
 # mkdir -p /mnt/home/$usrname/Archlinux-Installer
 cp * /mnt/home/$usrname/Archlinux-Installer -r
