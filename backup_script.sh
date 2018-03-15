@@ -51,16 +51,6 @@ function backup_shadowsocks
     cp /etc/shadowsocks/shadowsocks.json ./config/shadowsocks
 }
 
-function backup_hexo
-{
-    # rm ~/.hexo/public -rf
-    # rm ~/.hexo/.deploy_git ~/.hexo/.gitignore -rf
-    mkdir -p ./config/hexo/config
-    sudo pacman --noconfirm -S rsync
-    rsync -av --exclude='public' --exclude='node_modules' --exclude='.git' ~/.hexo/ ./config/hexo/config/
-    rm ./config/hexo/config/.git -rf
-}
-
 function backup_proxychains
 {
     cp /etc/proxychains.conf ./config/proxychains/
@@ -81,8 +71,8 @@ function backup_gnome_settings
     lock=${lock#"file://"}
     lock=${lock%"'"}
 
-    cp $background ./config/picture/background.jpg
-    cp $lock ./config/picture/lock.jpg
+    cp $background ./config/picture/background.png
+    cp $lock ./config/picture/lock.png
 
     # gtk backup
 	cp ~/.config/gtk-3.0/gtk.css ./config/gtk-3.0/gtk.css
@@ -100,24 +90,6 @@ function backup_chrome
     # to do
 }
 
-function backup_pick-colour-picker
-{
-    echo
-    # to do
-}
-
-function backup_deepin-screen-recorder
-{
-    echo
-    # to do
-}
-
-function backup_deepin-screenshot   
-{
-    echo
-    # to do
-}
-
 function backup_ranger
 {
     cp ~/.config/ranger/* ./config/ranger/ -r
@@ -126,17 +98,6 @@ function backup_ranger
 function backup_nautilus
 {
     cp ~/.config/nautilus/* ./config/nautilus/
-}
-
-function backup_custom_script
-{
-    cp /usr/local/bin/* ./config/script/ -r
-}
-
-function backup_vi_mode
-{
-    cp ~/.editrc ./config/readline/
-    cp ~/.inputrc ./config/readline/
 }
 
 function backup_touchpad
@@ -154,12 +115,6 @@ function backup_other
 {
 	#  smaller bar
     cp ~/.config/gtk-3.0/* ./config/gtk-3.0 -r
-
-    # # input method
-    # cp ~/.config/fcitx/ ./config/ -r
-    # cp ~/.config/sogoupy ./config/sogou/ -r
-    # cp ~/.config/sogoupy.users ./config/sogou/ -r
-    # cp ~/.config/sogou-qimpanel  ./config/sogou/ -r
 
     #  font conf
     cp ~/.font.conf ./config/font/.font.conf
@@ -195,27 +150,4 @@ function backup_libreoffice
 {
     echo 
     # to do
-}
-
-function backup_postman
-{
-    echo
-    #  to do
-}
-
-function backup_tim
-{
-    echo
-    # to do
-}
-
-function backup_vscode
-{
-    cp ~/.config/Code/User/keybindings.json ./config/vscode/
-    cp ~/.config/Code/User/settings.json ./config/vscode
-    cp ~/.config/Code/User/vsicons.settings.json ./config/vscode
-    # cp ~/.config/Code/User/snippets ./config/vscode -r
-
-    # extensions
-    ls ~/.vscode/extensions >./config/vscode/extensions.list
 }

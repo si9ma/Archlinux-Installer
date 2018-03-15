@@ -16,7 +16,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'dracula/vim'
 Plugin 'bling/vim-airline'
@@ -495,8 +495,6 @@ let g:airline_powerline_fonts = 1
  " 关闭状态显示空白符号计数,这个对我用处不大"
  let g:airline#extensions#whitespace#enabled = 0
  let g:airline#extensions#whitespace#symbol = '!'
-
- let g:dbext_default_profile_myDB='type=MYSQL:host=localhost:user=beta:dbname=RestaurantManage:passwd=sefjila;'
 
  let g:markdown_fenced_languages = ['javascript', 'ruby', 'sh', 'yaml', 'javascript', 'html', 'vim', 'coffee', 'json', 'diff' , '1c=c' , 'c++','makefile']
  let g:mkdp_path_to_chrome = "google-chrome-stable"

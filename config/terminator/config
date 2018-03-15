@@ -31,29 +31,8 @@
       parent = ""
       position = 590:306
       size = 756, 453
-      title = si9ma@Arch: ~
       type = Window
     [[[terminal1]]]
-      order = 0
-      parent = child0
-      profile = default
-      type = Terminal
-      uuid = ac1db261-5336-4ef3-a47b-bec2c2f710e6
-  [[ranger]]
-    [[[child0]]]
-      fullscreen = False
-      last_active_term = ac1db261-5336-4ef3-a47b-bec2c2f710e6
-      last_active_window = True
-      maximised = False
-      order = 0
-      parent = ""
-      position = 590:306
-      size = 756, 453
-      title = si9ma@Arch: ~
-      type = Window
-    [[[terminal1]]]
-      command = ranger
-      directory = /home/si9ma/Factory
       order = 0
       parent = child0
       profile = default

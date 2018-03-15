@@ -1,4 +1,0 @@
-#!/bin/bash
-
-proxychains /home/si9ma/.local/share/Whatever/whatever >/dev/null 2>&1 &
-disown %proxychains

@@ -112,10 +112,6 @@ function restore_shadowsocks
 	fi
 
 	sudo cp $Config_DIR/config/shadowsocks/shadowsocks.json /etc/shadowsocks/shadowsocks.json
-
-	# start
-	sudo systemctl enable shadowsocks@shadowsocks.service
-	sudo systemctl start shadowsocks@shadowsocks.service
 }
 
 function restore_proxychains
@@ -126,82 +122,26 @@ function restore_proxychains
 	sudo sed -i 's/^socks4.*/socks5	127.0.0.1 1080/' /etc/proxychains.conf
 }
 
-function restore_hexo
-{
-	# install git and nodejs
-	sudo pacman --noconfirm -S git nodejs npm
-
-	# install hexo
-	proxychains -q sudo npm install -g hexo-cli
-
-	# if failure,try again
-	if [ "$?" != "0" ]
-	then
-		echo
-		echo
-		echo "Install hexo failure, Trying again......."
-
-		# change the owner of /usr/lib/node_modules
-		sudo chown $USER:$(id -gn $USER) /usr/lib/node_modules
-		proxychains -q npm install -g hexo-cli
-		sudo chown root:root /usr/lib/node_modules
-	fi
-
-	# hexo init
-	rm -rf ~/.hexo
-	mkdir ~/.hexo
-	cd ~/.hexo && hexo init
-
-	# hexo config
-	cp -r $Config_DIR/config/hexo/.hexo. ~/.hexo
-
-	# install dependencies
-	cd ~/.hexo
-	dependencies=$(grep "hexo-" $Config_DIR/config/hexo/.hexo/package.json | cut -d "\"" -f 2 | grep "hexo-")
-	for dependency in $dependencies
-	do
-		npm install $dependency --save
-	done
-
-	# remove hello world post
-	rm ~/.hexo/source/_posts/hello-world.md
-}
-
 function restore_gnome_settings
 {
 	dconf load / < $Config_DIR/config/gnome/gnome.config
 
 	## desktop bakcground
-	cp $Config_DIR/config/picture/background.jpg ~/
-	gsettings set org.gnome.desktop.background picture-uri ~/background.jpg
+	cp $Config_DIR/config/picture/*.png ~/
+	gsettings set org.gnome.desktop.background picture-uri ~/background.png
 
 	## locked screen
-	gsettings set org.gnome.desktop.screensaver picture-uri ~/lock.jpg
+	gsettings set org.gnome.desktop.screensaver picture-uri ~/lock.png
 }
 
 function restore_firefox
 {
-	yaourt --noconfirm -S firefox-developer-edition
+	sudo pacman --noconfirm -S firefox
 }
 
 function restore_chrome
 {
 	sudo pacman --noconfirm -S google-chrome
-}
-
-function restore_pick-colour-picker
-{
-	yaourt --noconfirm -S pick-colour-picker
-}
-
-function restore_deepin-screen-recorder
-{
-	sudo pacman --noconfirm -S deepin-screen-recorder
-}
-
-function restore_deepin-screenshot   
-{
-	sudo pacman --noconfirm -S deepin-screenshot
 }
 
 function restore_ranger
@@ -216,16 +156,6 @@ function restore_nautilus
 	 sudo pacman --noconfirm -S nautilus
 	mkdir -p ~/.config/nautilus
 	 cp $Config_DIR/config/nautilus/* ~/.config/nautilus/
-}
-
-function restore_custom_script
-{
-	sudo cp $Config_DIR/config/script/* /usr/local/bin/ -r
-}
-
-function restore_vi_mode
-{
-	cp $Config_DIR/config/readline/.editrc  $Config_DIR/config/readline/.inputrc  ~/
 }
 
 function restore_touchpad
@@ -251,43 +181,11 @@ function restore_synapse
 
 function restore_other
 {
-	sudo pacman --noconfirm -S bless cmake dconf-editor gimp meld netease-cloud-music teamviewer gnome-tweak-tool wireshark-qt tcpdump htop openssh
+	sudo pacman --noconfirm -S bless cmake dconf-editor gimp meld netease-cloud-music gnome-tweak-tool htop
 
 	## ssh
 	sudo pacman --noconfirm -S openssh
-
-	## virtualbox
-	sudo pacman --noconfirm -S virtualbox virtualbox-guest-modules-arch virtualbox-guest-iso virtualbox-guest-utils virtualbox-host-modules-arch virtualbox-ext-oracle
 	
-	## java
-	yaourt --noconfirm -S jdk
-	sudo archlinux-java set java-8-jdk
-
-	## clipse for jee
-	# sudo pacman --noconfirm -S eclipse-jee
-
-	## android-studio
-	# sudo pacmcan --noconfirm -S android-studio
-
-	# ## mysql
-	# sudo pacman --noconfirm -S mariadb mysql-workbench
-	# sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-	# # start
-	# sudo systemctl start mariadb
-	# # config
-	# mysql_secure_installation
-	# # jdbc
-	# yaourt --noconfirm -S mariadb-jdbc
-	# sudo ln -s /usr/share/java/mariadb-jdbc/mariadb-java-client.jar /usr/lib/jvm/default-runtime/lib/ext/
-
-	## gdm auto login
-	sudo sed -i 's/^#WaylandEnable.*/WaylandEnable=false\nAutomaticLogin=beta\nAutomaticLoginEnable=True/' /etc/gdm/custom.conf
-
-	## grub no wait
-	sudo sed -i 's/^GRUB_TIMEOUT.*/GRUB_TIMEOUT=0/' /etc/default/grub
-	# generate grub.cfg
-	sudo grub-mkconfig -o /boot/grub/grub.cfg
-
 	## disable nouveau
 	echo "blacklist nouveau" | sudo tee -a /etc/modprobe.d/blacklist.conf >/dev/null
 
@@ -300,10 +198,6 @@ function restore_other
 	#  smaller bar
 	mkdir -p ~/.config/gtk-3.0
     cp $Config_DIR/config/gtk-3.0/* ~/.config/gtk-3.0/ -r
-
-	## gtk bookmarks
-	mkdir -p ~/Github
-	mkdir -p ~/Factory
 }
 
 function restore_gitkraken
@@ -319,34 +213,4 @@ function restore_inkscape
 function restore_libreoffice     
 {
 	sudo pacman --noconfirm -S libreoffice-fresh
-}
-
-function restore_postman
-{
-	yaourt --noconfirm -S postman-bin
-}
-
-function restore_tim
-{
-	echo 
-	# yaourt --noconfirm -S deepin-wine-tim
-	#  to do
-}
-
-function restore_vscode
-{
-	yaourt --noconfirm -S visual-studio-code-bin
-	
-	# config
-	mkdir -p ~/.config/Code/User
-	cp $Config_DIR/config/vscode/keybindings.json ~/.config/Code/User/
-	cp $Config_DIR/config/vscode/settings.json ~/.config/Code/User/
-	cp $Config_DIR/config/vscode/vsicons.settings.json ~/.config/Code/User/
-	# cp $Config_DIR/config/vscode/snippets ~/.config/Code/User/ -r
-
-	# extensions
-	extensions=$(cat $Config_DIR/config/vscode/extensions.list | xargs)
-	mkdir -p ~/.vscode/extensions
-	cd ~/.vscode/extensions
-	mkdir -p $extensions
 }

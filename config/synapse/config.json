@@ -1,7 +1,7 @@
 {
   "ui" : {
     "shortcuts" : {
-      "activate" : "<Alt>space",
+      "activate" : "<Control>space",
       "execute" : "Return",
       "execute-without-hide" : "<Shift>Return",
       "delete-char" : "BackSpace",

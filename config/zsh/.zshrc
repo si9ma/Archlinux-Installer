@@ -95,29 +95,6 @@ source $ZSH/oh-my-zsh.sh
 
 eval `dircolors ~/.dircolors`
 
-alias hexog="sh /home/si9ma/.hexo/script/generator.sh"
-alias cli="xclip -selection clipboard"
-alias addcate="sh /home/si9ma/.hexo/script/addcate.sh"
-alias addsite="sh /home/si9ma/.hexo/script/addsite.sh"
-alias addart="sh /home/si9ma/.hexo/script/addart.sh"
-alias zh="trans :zh"
-alias en="trans"
-alias cppman="proxychains -q cppman"
-alias pdf2htmlEX="docker run -ti --rm -v ~/:/pdf bwits/pdf2htmlex pdf2htmlEX"
-alias gt="cd ~/Temp"
-alias gh="cd ~"
-alias gw="cd ~/Windows"
-alias gg="cd ~/Github"
-alias mc="rlwrap -a -c -m' \ ' -H ~/.matlab_history.m matlab -nodesktop -nosplash"
-
 # vi mode
 set -o vi
 export KEYTIMEOUT=1
-
-PATH="/home/si9ma/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/si9ma/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/si9ma/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/si9ma/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/si9ma/perl5"; export PERL_MM_OPT;
-
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}

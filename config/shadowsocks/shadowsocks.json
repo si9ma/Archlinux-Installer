@@ -1,9 +1,9 @@
 {
-"server":"45.77.10.132",
-"server_port":413,
+"server":"0.0.0.0",
+"server_port":888,
 "local_address": "127.0.0.1",
 "local_port":1080,
-"password":"wangzijinshisb",
+"password":"password",
 "timeout":300,
 "method":"aes-256-cfb"
 }

@@ -58,7 +58,7 @@ IMSwitchIncludeInactive=True
 # Switching Remind Mode
 #RemindSwitchKey=
 # Switching Full Width Character Mode
-FullWidthSwitchKey=SHIFT_SPACE SHIFT_SPACE
+FullWidthSwitchKey=CTRL_SPACE CTRL_SPACE
 # Switch Full Width Punc Mode
 PuncSwitchKey=CTRL_. CTRL_.
 # Prev Page
