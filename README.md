@@ -33,8 +33,12 @@ Arch Linux主张“以用户为中心”，让用户自己去动手控制自己�
 
 ## How To Use
 
-- [How To Use](archlinux-installer.md) 
+- [How To Use](how-to-use.md)
 
 ## License
 
 GNU General Public License v3.0
+
+---
+
+> [Blog: coolcodes.me](https://coolcodes.me)
