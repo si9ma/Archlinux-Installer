@@ -1,9 +1,9 @@
-<h1 align="center">
+<h2 align="center">
   <br>
   <img src="picture/logo.svg" alt="Markdownify" width="450">
   <br>
 Arch Linux Installer
-</h1>
+</h2>
 
 <h3 align="center">Install your Arch Linux more quickly</h3>
 
