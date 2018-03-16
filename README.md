@@ -5,7 +5,7 @@
 Arch Linux Installer
 </h1>
 
-<h3 align="center">Install Arch Linux more quickly!</h3>
+<h3 align="center">Install your Arch Linux more quickly</h3>
 
 
 <p align="center">
