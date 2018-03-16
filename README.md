@@ -2,7 +2,7 @@
   <br>
   <img src="picture/logo.svg" alt="Markdownify" width="400">
   <br>
-<p style="font-size:17px">Arch Linux Installer</p>
+<p style="font-size:15px">Arch Linux Installer</p>
 </h1>
 
 <h3 align="center">Install Arch Linux more quickly!</h3>
