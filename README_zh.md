@@ -12,7 +12,7 @@ Arch Linux Installer
   <a href="#how-to-use">How To Use</a> •
   <a href="#errors-and-bugs">Errors and bugs</a> •
   <a href="#license">License</a> •
-  <a href="/">English</a>
+  <a href="https://github.com/si9ma/Archlinux-Installer">English</a>
 </p>
 
 ![bg](picture/bg.png)
