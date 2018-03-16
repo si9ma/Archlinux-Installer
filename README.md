@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="picture/logo1.svg" alt="Markdownify" width="400">
+  <img src="picture/logo.svg" alt="Markdownify" width="400">
   <br>
 <p style="font-size:20px">Arch Linux Installer</p>
 </h1>
