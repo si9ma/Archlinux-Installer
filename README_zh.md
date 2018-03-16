@@ -7,13 +7,11 @@ Arch Linux Installer
 
 <h4 align="center">Install your Arch Linux more quickly</h4>
 
-
 <p align="center">
-  <a href="#about">About</a> •
   <a href="#feature">Feature</a> •
-  <a href="#i-want-say">I Want Say</a> •
   <a href="#how-to-use">How To Use</a> •
-  <a href="#license">License</a>
+  <a href="#errors-and-bugs">Errors and bugs</a> •
+  <a href="#license">License</a> •
 </p>
 
 ![bg](picture/bg.png)
@@ -41,7 +39,9 @@ bash <(curl https://raw.githubusercontent.com/si9ma/Archlinux-Installer/master/i
 
 ## Report Bug
 
-欢迎提Bug !
+ 欢迎提Bug
+
+ https://github.com/si9ma/Archlinux-Installer/issues
 
 ## License
 

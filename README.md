@@ -11,6 +11,7 @@ Arch Linux Installer
 <p align="center">
   <a href="#feature">Feature</a> •
   <a href="#how-to-use">How To Use</a> •
+  <a href="#errors-and-bugs">Errors and bugs</a> •
   <a href="#license">License</a> •
   <a href="README_zh.md">简体中文</a>
 </p>
