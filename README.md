@@ -1,8 +1,11 @@
 <h1 align="center">
   <br>
   <img src="picture/logo.png" alt="Markdownify" width="200">
+  <br>
+<p style="font-size:25px">Arch Linux Installer</p>
+</h1>
 
-<h3 align="center">Arch Linux 安装引导器</h3>
+<h3 align="center">Install Arch Linux more quickly!</h3>
 
 
 <p align="center">
