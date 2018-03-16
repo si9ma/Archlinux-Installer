@@ -9,39 +9,40 @@ Arch Linux Installer
 
 
 <p align="center">
-  <a href="#about">About</a> •
   <a href="#feature">Feature</a> •
-  <a href="#i-want-say">I Want Say</a> •
   <a href="#how-to-use">How To Use</a> •
-  <a href="#license">License</a>
+  <a href="#license">License</a> •
+  <a href="README_zh.md">简体中文</a>
 </p>
 
 ![bg](picture/bg.png)
 
 ## Feature
 
-- 伪界面，比纯命令行更加友好
-- 支持KDE、Xfce、Gnome桌面系统的安装
-- 支持Gnome桌面系统的配置和中文输入法(搜狗)的安装
-- 支持Gnome下常用软件配置的备份和恢复(可以添加自己的备份/恢复脚本)
-- 支持BIOS和UEFI两种启动方式
-- 自动检测Windows启动项
+- Pseudo interface, more friendly than pure command line.
+- Support KDE, Xfce and Gnome desktop system installation.
+- Support Gnome configuration
+- Support sogou input method installation in Gnome.
+- You can backup and restore configuration of application in Gnome.
+- Support BIOS and UEFI boot mode
+- Automatically detect Windows startup option
 
 ## How To Use
 
-首先，需要准备好Arch Linux启动盘，并连网。
+First, you need to prepare an Arch Linux LiveUSB and connect to the internet.
 
-使用安装器：
+Use this Installer：
 
 ```bash
 bash <(curl https://raw.githubusercontent.com/si9ma/Archlinux-Installer/master/install.sh)
 ```
 
-[详细教程](how-to-use.md)
+[More Details](how-to-use.md)
 
-## Report Bug
+## Errors and bugs
 
-欢迎提Bug !
+If something is not behaving intuitively, it is a bug and should be reported.
+Report it here by creating an issue: https://github.com/si9ma/Archlinux-Installer/issues
 
 ## License
 
