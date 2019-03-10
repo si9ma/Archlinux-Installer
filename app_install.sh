@@ -1,7 +1,7 @@
 #!/bin/env bash
 
 ## author: si9ma
-## my blog: www.coolcodes.me
+## my blog: si9ma.me
 ##
 ## use this cript to install or config application
 ##

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## author: si9ma
-## my blog: www.coolcodes.me
+## my blog: si9ma.me
 ##
 ## backup your app configuration
 ##
