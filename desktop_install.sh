@@ -1,7 +1,7 @@
 #!/bin/env bash
 
 ## author: si9ma
-## my blog: si9ma.me
+## my blog: si9ma.com
 ##
 ## use this script to install desktop environment
 ##

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## author: si9ma
-## my blog: si9ma.me
+## my blog: si9ma.com
 ##
 ## add your restore function here
 ## function restore_<your config name>

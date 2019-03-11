@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## author: si9ma
-## my blog: si9ma.me
+## my blog: si9ma.com
 ##
 ## add your backup function here
 ## function backup_<your config name>
