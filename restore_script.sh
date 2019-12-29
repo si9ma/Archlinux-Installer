@@ -202,12 +202,12 @@ function restore_other
 
 function restore_gitkraken
 {
-	yaourt --noconfirm -S gitkraken 
+	yay --noconfirm -S gitkraken 
 }
 
 function restore_inkscape
 {
-	 yaourt --noconfirm -S inkscape-git 
+	 yay --noconfirm -S inkscape-git 
 }
 
 function restore_libreoffice     

@@ -582,14 +582,16 @@ sed -i "0,/$pattern/s/$pattern/\n\n&/" /etc/pacman.d/mirrorlist
 
 
 ### 8.Install the base and base-devel packages
+baseToInstallPkg='base base-devel linux linux-firmware vim nano dialog man-db man-pages texinfo e2fsprogs netctl crda dhcpcd dnsutils sudo wget 
+wireless_tools wpa_supplicant'
 echo
 
-pacstrap /mnt base base-devel
+pacstrap /mnt $baseToInstallPkg
 
 # if error
 if [ "$?" != "0" ]
 then
-    pacstrap -i /mnt base base-devel
+    pacstrap -i /mnt $baseToInstallPkg
 fi
 
 

@@ -12,8 +12,8 @@
 # don't run this script as root
 . no_root.sh
 
-# import yaourt function
-. yaourt.sh
+# import yay function
+. yay.sh
 
 # get usrname
 usrname=$(whoami)
@@ -65,15 +65,15 @@ then
 	echo "gsettings set org.gnome.settings-daemon.plugins.xsettings overrides \"{'Gtk/IMModule':<'fcitx'>}\"">>~/.xprofile
 
 	# 
-	val=$(check_yaourt)
+	val=$(check_yay)
 
-	# have install yaourt
+	# have install yay
 	if [ "$val" = "0" ]
 	then
-		yaourt --noconfirm -S fcitx-sogoupinyin
+		yay --noconfirm -S fcitx-sogoupinyin
 	else
-		install_yaourt
-		yaourt --noconfirm -S fcitx-sogoupinyin
+		install_yay
+		yay --noconfirm -S fcitx-sogoupinyin
 	fi
 
 	# configure sougoupinyin
@@ -99,7 +99,7 @@ then
 elif [ "$choice" = "(2)" ] # just install chinese font and chinese input method
 then
 	# install chinese font 
-	sudo pacman --noconfirm -S wqy-microhei wqy-microhei-lite wqy-bitmapfont wqy-zenhei
+	sudo pacman --noconfirm -S wqy-microhei wqy-bitmapfont wqy-zenhei
 
 	# fontconfig
 	cp $Config_DIR/config/font/.fonts.conf ~/.fonts.conf
@@ -114,15 +114,15 @@ then
 	echo "gsettings set org.gnome.settings-daemon.plugins.xsettings overrides \"{'Gtk/IMModule':<'fcitx'>}\"">>~/.xprofile
 
 	# 
-	val=$(check_yaourt)
+	val=$(check_yay)
 
-	# have install yaourt
+	# have install yay
 	if [ "$val" = "0" ]
 	then
-		yaourt --noconfirm -S fcitx-sogoupinyin
+		yay --noconfirm -S fcitx-sogoupinyin
 	else
-		install_yaourt
-		yaourt --noconfirm -S fcitx-sogoupinyin
+		install_yay
+		yay --noconfirm -S fcitx-sogoupinyin
 	fi
 
 	## myself

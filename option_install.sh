@@ -31,8 +31,8 @@ sudo chmod -R 777 /home/$usrname/Archlinux-Installer
 sudo pacman -S --noconfirm wget git curl
 
 ## AUR,just for x86_64 and i686
-title="AUR And Yaourt"
-msg="The Arch User Repository (AUR) is a community-driven repository for Arch users. It contains package descriptions (PKGBUILDs) that allow you to compile a package from source with makepkg and then install it via pacman. The AUR was created to organize and share new packages from the community and to help expedite popular packages' inclusion into the community repository.\n\nYaourt, stands for Yet AnOther User Repository Tool, is a package wrapper that can be used to easily install packages from AUR.\n\nWould you want to install it and use it?\n\nPlease confirm before typing the [ENTER], because you can't undo it."
+title="AUR And yay"
+msg="The Arch User Repository (AUR) is a community-driven repository for Arch users. It contains package descriptions (PKGBUILDs) that allow you to compile a package from source with makepkg and then install it via pacman. The AUR was created to organize and share new packages from the community and to help expedite popular packages' inclusion into the community repository.\n\nyay, stands for Yet AnOther User Repository Tool, is a package wrapper that can be used to easily install packages from AUR.\n\nWould you want to install it and use it?\n\nPlease confirm before typing the [ENTER], because you can't undo it."
 
 dialog --ascii-lines --title "$title" --backtitle "$HEADER" --yesno "$msg" 18 70
 
@@ -43,7 +43,7 @@ case $retval in
 	# 0)  Yes,install AUR
 		0)
 
-		title="AUR And Yaourt"
+		title="AUR And yay"
 		msg="Please select the repositories suitable for you. More details, please see \"https://wiki.archlinux.org/index.php/unofficial_user_repositories\"\n\n[ESC] to exit the installer.\n\nPlease confirm before typing the [ENTER], because you can't undo it."
 
 
@@ -113,9 +113,9 @@ case $retval in
 		echo "SigLevel=Never" | sudo tee -a /etc/pacman.conf >/dev/null
 		echo "Server = $server" | sudo tee -a /etc/pacman.conf >/dev/null
 
-		# install Yaourt
-		sudo pacman --noconfirm -Syu yaourt
-		yaourt -Syu
+		# install yay
+		sudo pacman --noconfirm -Syu yay
+		yay -Syu
 		;;
 
 	# 255) ESC ,exit
