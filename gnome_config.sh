@@ -6,14 +6,14 @@
 ## use this script to config gnome  
 ##
 
-# there are a bug when use log in this script(can't use yaourt)
+# there are a bug when use log in this script(can't use yay)
 . log.sh
 
 # don't run this script as root
 . no_root.sh
 
-# import yaourt functions
-. yaourt.sh
+# import yay functions
+. yay.sh
 
 HEADER="Archlinux Installer"
 EXIT_MSG="You have left from Archlinux Installer!"
@@ -77,15 +77,15 @@ case $retval in
 		if [ "$choice" = "OSX-Arc-White" ]
 		then
 			# download OSX-Arc-White
-			val=$(check_yaourt)
+			val=$(check_yay)
 
-			# have install yaourt
+			# have install yay
 			if [ "$val" = "0" ]
 			then
-				yaourt --noconfirm -S osx-arc-white
+				yay --noconfirm -S osx-arc-white
 			else
-				install_yaourt
-				yaourt --noconfirm  -S osx-arc-white
+				install_yay
+				yay --noconfirm  -S osx-arc-white
 			fi
 
 			white=1
@@ -93,15 +93,15 @@ case $retval in
 		elif [ "$choice" = "OSX-Arc-Darker" ]
 		then
 			# Download OSX-Arc-Darker
-			val=$(check_yaourt)
+			val=$(check_yay)
 
-			# have install yaourt
+			# have install yay
 			if [ "$val" = "0" ]
 			then
-				yaourt --noconfirm -S osx-arc-darker
+				yay --noconfirm -S osx-arc-darker
 			else
-				install_yaourt
-				yaourt --noconfirm -S osx-arc-darker
+				install_yay
+				yay --noconfirm -S osx-arc-darker
 			fi
 
 			darker=1
@@ -109,15 +109,15 @@ case $retval in
 		elif [ "$choice" = "OSX-Arc-Shadow" ]
 		then
 			# Download OSX-Arc-Shadow
-			val=$(check_yaourt)
+			val=$(check_yay)
 
-			# have install yaourt
+			# have install yay
 			if [ "$val" = "0" ]
 			then
-				yaourt --noconfirm -S osx-arc-shadow
+				yay --noconfirm -S osx-arc-shadow
 			else
-				install_yaourt
-				yaourt --noconfirm -S osx-arc-shadow
+				install_yay
+				yay --noconfirm -S osx-arc-shadow
 			fi
 
 			shadow=1
@@ -125,15 +125,15 @@ case $retval in
 		elif [ "$choice" = "OSX-Arc-Plus" ]
 		then
 			# Download OSX-Arc-Plus
-			val=$(check_yaourt)
+			val=$(check_yay)
 
-			# have install yaourt
+			# have install yay
 			if [ "$val" = "0" ]
 			then
-				yaourt --noconfirm -S osx-arc-plus
+				yay --noconfirm -S osx-arc-plus
 			else
-				install_yaourt
-				yaourt --noconfirm -S osx-arc-plus
+				install_yay
+				yay --noconfirm -S osx-arc-plus
 			fi
 
 			plus=1
@@ -182,15 +182,15 @@ case $retval in
 			mv ~/Numix-Circle/Numix-Circle-Light ~/.icons/ 
 		elif [ "$choice" = "macOS" ]
 		then
-			val=$(check_yaourt)
+			val=$(check_yay)
 
-			# have install yaourt
+			# have install yay
 			if [ "$val" = "0" ]
 			then
-				yaourt --noconfirm -S macos-icon-theme
+				yay --noconfirm -S macos-icon-theme
 			else
-				install_yaourt
-				yaourt --noconfirm -S macos-icon-theme
+				install_yay
+				yay --noconfirm -S macos-icon-theme
 			fi
 		fi
 
@@ -220,15 +220,15 @@ case $retval in
 			if [ "$white" != "1" ]
 			then
 				# download OSX-Arc-White
-				val=$(check_yaourt)
+				val=$(check_yay)
 
-				# have install yaourt
+				# have install yay
 				if [ "$val" = "0" ]
 				then
-					yaourt --noconfirm -S osx-arc-white
+					yay --noconfirm -S osx-arc-white
 				else
-					install_yaourt
-					yaourt --noconfirm -S osx-arc-white
+					install_yay
+					yay --noconfirm -S osx-arc-white
 				fi
 			fi
 
@@ -238,15 +238,15 @@ case $retval in
 			if [ "$darker" != "1" ]
 			then
 				# Download OSX-Arc-Darker
-				val=$(check_yaourt)
+				val=$(check_yay)
 
-				# have install yaourt
+				# have install yay
 				if [ "$val" = "0" ]
 				then
-					yaourt --noconfirm -S osx-arc-darker
+					yay --noconfirm -S osx-arc-darker
 				else
-					install_yaourt
-					yaourt --noconfirm -S osx-arc-darker
+					install_yay
+					yay --noconfirm -S osx-arc-darker
 				fi
 			fi
 
@@ -255,15 +255,15 @@ case $retval in
 			if [ "$shadow" != "1" ]
 			then
 				# Download OSX-Arc-Shadow
-				val=$(check_yaourt)
+				val=$(check_yay)
 
-				# have install yaourt
+				# have install yay
 				if [ "$val" = "0" ]
 				then
-					yaourt --noconfirm -S osx-arc-shadow
+					yay --noconfirm -S osx-arc-shadow
 				else
-					install_yaourt
-					yaourt --noconfirm -S osx-arc-shadow
+					install_yay
+					yay --noconfirm -S osx-arc-shadow
 				fi
 			fi
 
@@ -272,15 +272,15 @@ case $retval in
 			if [ "$plus" != "1" ]
 			then
 				# Download OSX-Arc-Plus
-				val=$(check_yaourt)
+				val=$(check_yay)
 
-				# have install yaourt
+				# have install yay
 				if [ "$val" = "0" ]
 				then
-					yaourt --noconfirm -S osx-arc-plus
+					yay --noconfirm -S osx-arc-plus
 				else
-					install_yaourt
-					yaourt --noconfirm -S osx-arc-plus
+					install_yay
+					yay --noconfirm -S osx-arc-plus
 				fi
 			fi
 		elif [ "$choice" = "Yosemite-Shell" ]
@@ -297,13 +297,13 @@ case $retval in
 
 		## Gnome shell extensions
 
-		# check the status of yaourt.
-		val=$(check_yaourt)
+		# check the status of yay.
+		val=$(check_yay)
 
-		# have install yaourt
+		# have install yay
 		if [ "$val" != "0" ]
 		then
-			install_yaourt
+			install_yay
 		fi
 
 		# window
@@ -333,7 +333,7 @@ case $retval in
 
 		function install_dash_to_dock
 		{
-			yaourt --noconfirm -S gnome-shell-extension-dash-to-dock-git
+			yay --noconfirm -S gnome-shell-extension-dash-to-dock-git
 			# enable
 			enable_extensions dash-to-dock@micxgx.gmail.com
 			# icons size
@@ -344,13 +344,13 @@ case $retval in
 
 		function install_topicons_plus
 		{
-			yaourt --noconfirm -S gnome-shell-extension-topicons-plus
+			yay --noconfirm -S gnome-shell-extension-topicons-plus
 			enable_extensions TopIcons@phocean.net
 		}
 
 		function install_system_monitor
 		{
-			yaourt --noconfirm -S gnome-shell-extension-system-monitor-git
+			yay --noconfirm -S gnome-shell-extension-system-monitor-git
 			enable_extensions system-monitor@paradoxxx.zero.gmail.com
 		}
 

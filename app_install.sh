@@ -265,7 +265,7 @@ function config_other
 	sudo pacman --noconfirm -S virtualbox virtualbox-guest-modules-arch virtualbox-guest-iso virtualbox-guest-utils virtualbox-host-modules-arch virtualbox-ext-oracle
 	
 	## java
-	yaourt --noconfirm -S jdk
+	yay --noconfirm -S jdk
 	sudo archlinux-java set java-8-jdk
 
 	## clipse for jee
@@ -282,7 +282,7 @@ function config_other
 	# config
 	mysql_secure_installation
 	# jdbc
-	yaourt --noconfirm -S mariadb-jdbc
+	yay --noconfirm -S mariadb-jdbc
 	sudo ln -s /usr/share/java/mariadb-jdbc/mariadb-java-client.jar /usr/lib/jvm/default-runtime/lib/ext/
 
 	## gdm auto login
